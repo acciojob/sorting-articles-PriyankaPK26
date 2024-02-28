@@ -7,31 +7,9 @@
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
+	<ul id="bands"></ul>
     <script type="text/javascript" src="./script.js">
-		 const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
-
-    function ignoreArticles(bandName) {
-      // List of articles to ignore
-      const ignoreList = ['a', 'an', 'the'];
-      // Split the bandName into words
-      const words = bandName.split(' ');
-      // Filter out the words to ignore
-      const filteredWords = words.filter(word => !ignoreList.includes(word.toLowerCase()));
-      // Join the filtered words back into a string
-      return filteredWords.join(' ');
-    }
-
-    // Sort the bands ignoring articles
-    const sortedBands = bands.slice().sort((a, b) => ignoreArticles(a) > ignoreArticles(b) ? 1 : -1);
-
-    const bandList = document.getElementById('band');
-    // Create and append list items for each band
-    sortedBands.forEach(band => {
-      const listItem = document.createElement('li');
-      listItem.textContent = band;
-      bandList.appendChild(listItem);
-    });
+		
 </script>
 
 </body>
